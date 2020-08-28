@@ -33,4 +33,11 @@ pip install matplotlib
 Import the modules
 **warnings module**
 I had imported warning module as my requests are unable to verify SSL certificate of IDRBT website because of which when i send a request to the website it throws me an error. In order to avoid this i turned off the verification by using parameter (verify = False). There are even other safer way's to do this i don't recommend anyone to do this if there are into production. As i turned off the verification python gives me the warning to turn on the verification in order to dodge those warning's i had imported warnings module and ignored them.
+## Text Extraction
+After importing all the modules, i had taken few url's of IDRBT in order to gather enough text for processing. 
+I had created a small function which is used to get the required text out of the page. First i send a GET request to the specified url(parameter of the function) then i parsed the content in the url using BeautifulSoup lxml parser(default) . The data to be extracted is in the div tag with attributes 'class'= 'col-md-8' as all the pages are in same format no need to worry about changing the attributes and finally the function returns the text in it using get_text() method. I had stored all the url's in a list and gathered the text in all the url's by iterating throught the list. 
+
+**TextBlob**
+Textblob is a library for processing textual data. It provides a simple API with which we can tag parts of speech of each word in text on the basis of definition and context. So we create a textblob object and pass our text with it and we call function of textblob in order to do a parts of speech tagging, then we sepearte noun if the tags are 'NN' , 'NNS', 'NNP' OR 'NNPS' and similarly for verbs there would be different tagging.
+I had downloaded two images one is image of 5 and the other is image of G **please remove background in both the images** 
 
