@@ -1,5 +1,6 @@
 # WordCloud(optional project)
 ## Project Overview
+### Wordcloud is a visual representation of text data.
 ![final_output](https://user-images.githubusercontent.com/45941424/91551732-4b644100-e948-11ea-99a6-e65fcdd5af65.png)
 ### 5 is made of Noun's and G is made of Verb's
 
@@ -40,4 +41,9 @@ I had created a small function which is used to get the required text out of the
 **TextBlob**
 Textblob is a library for processing textual data. It provides a simple API with which we can tag parts of speech of each word in text on the basis of definition and context. So we create a textblob object and pass our text with it and we call function of textblob in order to do a parts of speech tagging, then we sepearte noun if the tags are 'NN' , 'NNS', 'NNP' OR 'NNPS' and similarly for verbs there would be different tagging.
 I had downloaded two images one is image of 5 and the other is image of G **please remove background in both the images** 
+
+**Wordcloud Mask**
+
+So we use external images as a mask to give a specific shape to our workcloud. We need to have the image in our current directory and give it to the wordcloud function. A wordcloud function displays a list of words, the importance of each being shown with font size or color. This format is useful for quickly perceiving the most prominent terms. 
+So i created two masks maskarray, maskarray2 to specific the shape. In order to plot this i had used matplotlib.pyplot along with subplots for each cloud. Then create wordcloud functions with mask parameter in it and generate the cloud for both noun and verb.
 
